@@ -30,8 +30,10 @@ This extension contributes the following settings:
 
 Users appreciate release notes as you update your extension.
 
-### 0.0.1
+## v0.0.1 (2022-09-10)
 
-Initial release of ...
+### New feature:
+
+- init project([`4d1b1ce`](https://github.com/Binbiubiubiu/vscode-against-996/commit/4d1b1ce4603d40fd35e907754cc42aa06842a18c)) (by kujiu)
 
 ---
