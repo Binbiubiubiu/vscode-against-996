@@ -8,7 +8,7 @@ let isHoliday = false;
 async function initConfig() {
   isHoliday = await isTodayHoliday();
 }
-// initConfig();
+initConfig();
 
 // 没到上班时间
 async function isBeforeWorktime(now: dayjs.Dayjs) {

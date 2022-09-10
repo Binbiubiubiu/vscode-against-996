@@ -36,6 +36,7 @@ export function activate({ subscriptions }: vscode.ExtensionContext) {
   // update status bar item once at start
   monitor.listen();
   subscriptions.push(handleConfigChangeListener);
+  monitor.checkIsWorktime();
 }
 
 // this method is called when your extension is deactivated
