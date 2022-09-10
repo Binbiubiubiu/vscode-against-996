@@ -1,0 +1,92 @@
+{
+  "name": "vscode-against-996",
+  "displayName": "Against 996",
+  "description": "Against 996, refuse to work overtime",
+  "version": "0.0.1",
+  "engines": {
+    "vscode": "^1.71.0"
+  },
+  "categories": [
+    "Other"
+  ],
+  "activationEvents": [
+    "*"
+  ],
+  "main": "./out/extension.js",
+  "contributes": {
+    "configuration": {
+      "title": "against996",
+      "properties": {
+        "Against996.startTime": {
+          "type": "string",
+          "default": "09:00:00",
+          "description": "The start time of work",
+          "pattern": "^\\d{1,2}:\\d{1,2}:\\d{1,2}$",
+          "patternErrorMessage": "Time format error"
+        },
+        "Against996.endTime": {
+          "type": "string",
+          "default": "18:00:00",
+          "description": "The end time of work",
+          "pattern": "^\\d{1,2}:\\d{1,2}:\\d{1,2}$",
+          "patternErrorMessage": "Time format error"
+        },
+        "Against996.countDownCloseWindow": {
+          "type": "number",
+          "default": 5,
+          "description": "The countdown to the end of the day, the countdown to the window before closing (in seconds)",
+          "pattern": "^[1-9]$",
+          "patternErrorMessage": "Number format error"
+        },
+        "Against996.startText": {
+          "type": "string",
+          "default": "宝贝,还没到上班时间,着急啥!",
+          "description": "The work prompt copy"
+        },
+        "Against996.startConfirmText": {
+          "type": "string",
+          "default": "好的,不急",
+          "description": "The work confirmation button copy"
+        },
+        "Against996.endText": {
+          "type": "string",
+          "default": "{{time}}s后强制关闭! 宝贝,还不赶紧下班!",
+          "description": "The off-the-job prompt copy"
+        }
+      }
+    },
+    "commands": [
+      {
+        "command": "Against996.against996",
+        "title": "Against 996"
+      }
+    ]
+  },
+  "scripts": {
+    "vscode:prepublish": "pnpm run compile",
+    "compile": "tsc -p ./",
+    "watch": "tsc -watch -p ./",
+    "pretest": "pnpm run compile && pnpm run lint",
+    "lint": "eslint src --ext ts",
+    "test": "node ./out/test/runTest.js"
+  },
+  "devDependencies": {
+    "@types/glob": "^7.2.0",
+    "@types/mocha": "^9.1.1",
+    "@types/node": "16.x",
+    "@types/node-schedule": "^2.1.0",
+    "@types/vscode": "^1.71.0",
+    "@typescript-eslint/eslint-plugin": "^5.31.0",
+    "@typescript-eslint/parser": "^5.31.0",
+    "@vscode/test-electron": "^2.1.5",
+    "eslint": "^8.20.0",
+    "glob": "^8.0.3",
+    "mocha": "^10.0.0",
+    "typescript": "^4.7.4"
+  },
+  "dependencies": {
+    "axios": "^0.27.2",
+    "dayjs": "^1.11.5",
+    "node-schedule": "^2.1.0"
+  }
+}
