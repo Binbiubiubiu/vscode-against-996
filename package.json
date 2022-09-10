@@ -3,6 +3,7 @@
   "displayName": "Against 996",
   "description": "Against 996, refuse to work overtime",
   "version": "0.0.1",
+  "license": "MIT",
   "engines": {
     "vscode": "^1.71.0"
   },
@@ -88,5 +89,15 @@
     "axios": "^0.27.2",
     "dayjs": "^1.11.5",
     "node-schedule": "^2.1.0"
-  }
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Binbiubiubiu/vscode-against-996.git"
+  },
+  "keywords": [],
+  "author": "",
+  "bugs": {
+    "url": "https://github.com/Binbiubiubiu/vscode-against-996/issues"
+  },
+  "homepage": "https://github.com/Binbiubiubiu/vscode-against-996#readme"
 }
