@@ -30,6 +30,12 @@ This extension contributes the following settings:
 
 Users appreciate release notes as you update your extension.
 
+## v0.0.3 (2022-09-10)
+
+### Bugs fixed:
+
+- 修复问题([`88b8030`](https://github.com/Binbiubiubiu/vscode-against-996/commit/88b803005bf5b2cd914ca455c9ab2509a4a08fa1)) (by Binbiubiubiu)
+
 ## v0.0.2 (2022-09-10)
 
 ### Bugs fixed:
