@@ -30,6 +30,12 @@ This extension contributes the following settings:
 
 Users appreciate release notes as you update your extension.
 
+## v0.0.2 (2022-09-10)
+
+### Bugs fixed:
+
+- 修复打开应用校验([`54d0067`](https://github.com/Binbiubiubiu/vscode-against-996/commit/54d006745a4312deddfb0f1fe75c7f546a1e19b3)) (by Binbiubiubiu)
+
 ## v0.0.1 (2022-09-10)
 
 ### New feature:
