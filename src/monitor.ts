@@ -7,6 +7,7 @@ import { isTodayHoliday } from "./api";
 let isHoliday = false;
 async function initConfig() {
   isHoliday = await isTodayHoliday();
+  checkIsWorktime();
 }
 initConfig();
 
@@ -36,7 +37,6 @@ async function isAfterWorktime(now: dayjs.Dayjs) {
 }
 
 async function afterWorktimeAction(flag: boolean = false) {
-  console.log(isHoliday || !flag);
   if (isHoliday || !flag) {
     return;
   }
@@ -88,7 +88,6 @@ export async function update() {
     const et = CONFIG.endTime;
     endWorkJob.reschedule(`${et.second} ${et.minute} ${et.hour} * * ?`);
   }
-  console.log(endWorkJob);
 }
 
 export async function close() {

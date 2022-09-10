@@ -9,7 +9,7 @@ export async function isHoliday(query: string) {
   const url = `https://opendata.baidu.com/api.php?tn=wisetpl&format=json&resource_id=39043&query=${encodeURIComponent(
     query
   )}&t=${now.getTime()}&cb=cb`;
-  console.log(url);
+
   try {
     const res = await request.get(url);
     data = res.data;
