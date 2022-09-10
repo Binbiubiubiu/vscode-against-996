@@ -3,7 +3,8 @@
   "displayName": "Against 996",
   "description": "Against 996, refuse to work overtime",
   "version": "0.0.1",
-  "publisher": "simon-bin",
+  "publisher": "Binbiubiubiu",
+  "icon": "images/icon.png",
   "license": "MIT",
   "engines": {
     "vscode": "^1.71.0"
