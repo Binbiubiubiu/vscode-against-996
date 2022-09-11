@@ -31,6 +31,12 @@ This extension contributes the following settings:
 
 Users appreciate release notes as you update your extension.
 
+## v0.0.4 (2022-09-11)
+
+### New feature:
+
+- 增加是否忽略节假日([`83fe0ae`](https://github.com/Binbiubiubiu/vscode-against-996/commit/83fe0aece5c870b85157d045877865b1eb7d9ecb)) (by Binbiubiubiu)
+
 ## v0.0.3 (2022-09-10)
 
 ### Bugs fixed:
