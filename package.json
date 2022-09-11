@@ -2,7 +2,7 @@
   "name": "vscode-against-996",
   "displayName": "Against 996",
   "description": "Against 996, refuse to work overtime",
-  "version": "0.0.3",
+  "version": "0.0.4",
   "publisher": "Binbiubiubiu",
   "icon": "images/icon.png",
   "license": "MIT",
@@ -20,6 +20,11 @@
     "configuration": {
       "title": "against996",
       "properties": {
+        "Against996.ignoreHolidays": {
+          "type": "boolean",
+          "default": false,
+          "description": "Whether holiday times are ignored"
+        },
         "Against996.startTime": {
           "type": "string",
           "default": "09:00:00",

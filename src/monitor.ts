@@ -5,8 +5,13 @@ import CONFIG from "./config";
 import { isTodayHoliday } from "./api";
 
 let isHoliday = false;
-async function initConfig() {
-  isHoliday = await isTodayHoliday();
+export async function initConfig() {
+  if (CONFIG.ignoreHolidays) {
+    isHoliday = false;
+  } else {
+    isHoliday = await isTodayHoliday();
+  }
+  console.log("initConfig", isHoliday);
   checkIsWorktime();
 }
 initConfig();

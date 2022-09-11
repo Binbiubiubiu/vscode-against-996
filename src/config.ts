@@ -23,10 +23,10 @@ export function getTimeConfig(key: string) {
     second: +second,
   };
 }
-type TimeConfig = ReturnType<typeof getTimeConfig>;
 
 const CONFIG = new Proxy(
   {
+    ignoreHolidays: false,
     startTime: {
       value: "09:00:00",
       hour: 9,
@@ -62,13 +62,20 @@ export default CONFIG;
 
 export const handleConfigChangeListener =
   vscode.workspace.onDidChangeConfiguration((e) => {
-    if (e.affectsConfiguration("Against996")) {
-      refreshConfig();
+    const isConfigChange = (...args: string[]) =>
+      args.some((k) => e.affectsConfiguration(k));
+
+    if (!isConfigChange("Against996")) {
+      return;
     }
-    const timeConfigs = ["Against996.startTime", "Against996.endTime"];
-    const hasTimeChange = timeConfigs.some((k) => e.affectsConfiguration(k));
-    if (hasTimeChange) {
+    refreshConfig();
+
+    if (isConfigChange("Against996.startTime", "Against996.endTime")) {
       monitor.update();
       myStatusBarItem.text = `Against 996(${CONFIG.startTime.value} - ${CONFIG.endTime.value})`;
+    }
+
+    if (isConfigChange("Against996.ignoreHolidays")) {
+      monitor.initConfig();
     }
   });
